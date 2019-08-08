@@ -16,12 +16,12 @@ function showPicked(input) {
 
 function analyze() {
   var uploadFiles = el("file-input").files;
-  if (uploadFiles.length !== 1) alert("Please select a file to analyze!");
+  if (uploadFiles.length !== 1) alert("Please select a file to analyse!");
 
-  el("analyze-button").innerHTML = "Analyzing...";
+  el("analyze-button").innerHTML = "Analysing...";
   var xhr = new XMLHttpRequest();
   var loc = window.location;
-  xhr.open("POST", `${loc.protocol}//${loc.hostname}:${loc.port}/analyze`,
+  xhr.open("POST", `${loc.protocol}//${loc.hostname}:${loc.port}/analyse`,
     true);
   xhr.onerror = function() {
     alert(xhr.responseText);
