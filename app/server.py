@@ -164,7 +164,7 @@ async def analyze(request):
     img = open_image(BytesIO(img_bytes))
     prediction = learn.predict(img)
     top3 = sorted(zip(np.array(prediction[2])*100, classes), reverse=True)[:3]
-    result = '\n'.join([f'{p:.0f}% {g}' for p,g in top3])
+    result = '   '.join([f'{p:.0f}% {g}' for p,g in top3])
     return JSONResponse({'result': result})
 
 
