@@ -21,7 +21,7 @@ function analyze() {
   el("analyze-button").innerHTML = "Analysing...";
   var xhr = new XMLHttpRequest();
   var loc = window.location;
-  xhr.open("POST", `${loc.protocol}//${loc.hostname}:${loc.port}/analyse`,
+  xhr.open("POST", `${loc.protocol}//${loc.hostname}:${loc.port}/analyze`,
     true);
   xhr.onerror = function() {
     alert(xhr.responseText);
@@ -31,7 +31,7 @@ function analyze() {
       var response = JSON.parse(e.target.responseText);
       el("result-label").innerHTML = `Top 3 results:  ${response["result"]}`;
     }
-    el("analyze-button").innerHTML = "Analyze";
+    el("analyze-button").innerHTML = "Analyse";
   };
 
   var fileData = new FormData();
