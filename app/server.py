@@ -9,7 +9,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.dropbox.com/s/2mpmxuzh5a85ms8/exportFlowers.pkl?dl=1'
+#export_file_url = 'https://www.dropbox.com/s/2mpmxuzh5a85ms8/exportFlowers.pkl?dl=1'    #Initial version
+export_file_url = 'https://www.dropbox.com/s/xxe5r90e88jb0pb/exportBigFlowers.pkl?dl=1'  #Big training set version
 export_file_name = 'exportFlowers.pkl'
 
 classes = ['alpine_sea_holly',
